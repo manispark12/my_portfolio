@@ -14,6 +14,13 @@ body {
     color: #333;
     line-height: 1.6;
   }
+
+h1::before{
+    content:attr(text-data);
+    animation-name:test;
+    
+
+}
   
 button, a, .tech-item img, .project, .skills-list li {
     transition: all 0.3s ease;
@@ -220,6 +227,51 @@ button, a, .tech-item img, .project, .skills-list li {
     padding: 30px;
 
 }
+.anime{
+    display:flex;
+}
+.anime::before{
+    content:attr(text-data);
+    color:#333;
+    position:absolute;
+    width:40px;
+    border-right: 2px solid white;
+    white-space:nowrap;
+    overflow: hidden;
+    animation-name: test;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes test{
+    0% {
+        width:0ch;
+        color:black;
+
+
+    }
+    25%{
+        width:5ch;
+        color:magenta;
+    }
+    50%{
+        width:9ch;
+        color:seagreen;
+
+    }
+    75%{
+        width:13ch;
+        color:chartreuse;
+
+    }
+    100%{
+        width:18ch;
+        color:#007bff;
+    }
+}
+
 .education::before {
     content: "";
     position: absolute;
