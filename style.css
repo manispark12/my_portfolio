@@ -327,7 +327,6 @@ button, a, .tech-item img, .project, .skills-list li {
 }
 .projects{
     display: grid;
-    flex-wrap: wrap;
     justify-content: space-between;
     gap:20px;
     padding: 40px;
@@ -389,7 +388,6 @@ button, a, .tech-item img, .project, .skills-list li {
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap:15px;
-    flex-wrap: wrap;
     list-style-type: none;
     padding: 10px;
     margin-bottom: 20px;
