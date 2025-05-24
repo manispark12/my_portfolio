@@ -197,7 +197,17 @@ button, a, .tech-item img, .project, .skills-list li {
     border-radius: 50%;
     margin-top: -50px;
     border: 2px solid black;
+    opacity:0;
+    transform: translateY(-50px);
+    animation: revealImage 2.5s ease-out forwards;
+
     border-color: black;
+}
+@keyframes revealImage {
+    to {
+      opacity:1;
+      transform: translateY(0);     
+    }
 }
 .space-gap {
     display: inline-block;
