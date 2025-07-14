@@ -87,3 +87,9 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
         requestAnimationFrame(smoothScroll);
     });
 });
+const titles = ["Mani kanta", "PortFolio"]
+let index = 0
+setInterval(() =>{
+  document.title=titles[index]
+  index= (index+1)%titles.length;
+},2000)
