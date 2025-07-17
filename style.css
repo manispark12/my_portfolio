@@ -215,7 +215,8 @@ button, a, .tech-item img, .project, .skills-list li {
   }
   
 .main-line{
-    margin: 90px 30px 90px 30px;
+
+    margin: 90px 30px 90px 0px;
     padding: 10px 20px;
 }
 .main-line h1{
@@ -229,6 +230,9 @@ button, a, .tech-item img, .project, .skills-list li {
     line-height: 24px;
     color:black;
 } 
+.connection {
+  margin-left: 0;
+}
 .background{
     z-index: -1;
     position: fixed;
@@ -239,15 +243,15 @@ button, a, .tech-item img, .project, .skills-list li {
 }
 .social-icon i{
   font-size: 32px;
-  color: black;
-  margin-left: 0;
-  margin: 10px 20px;
+  color:deeppink;
+  margin: 10px 30px 30px 0px;
   transition: color 0.3s ease;
   text-decoration: none;
 }
 
 .social-icon i:hover {
-  color: #0077b5; /* LinkedIn Blue or choose brand color */
+  color: #0077b5;
+  text-decoration: underline;
 }
 
 .first{
@@ -259,6 +263,52 @@ button, a, .tech-item img, .project, .skills-list li {
     align-items: stretch;
     box-sizing: border-box;
 
+}
+@media(min-width:768px)
+{
+  .my-button .btn{
+    margin-right:1rem;
+  }
+}
+.btn-outline{
+  border:2px solid #2d3748;
+  color:var(--text-light);
+  background: transparent;
+  background-image: linear-gradient(135deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%);
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  color: white;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+.download-btn {
+     border:2px solid black;
+     cursor:pointer;
+     color:black;
+     background-image: linear-gradient(140deg,rgb(255,255,200) 0%,rgb(255,85,190) 100%);
+     background-repeat: initial;
+     background-attachment: initial;
+     background-origin: initial;
+     background-clip: initial;
+}
+.download-btn:hover{
+  background-image: linear-gradient(135deg,rgb(255,255,255)0%,rgb(255,255,255) 100%);
+  transition-delay: 4s;
+}
+
+.btn{
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight:600;
+  text-decoration: none;
+  transition-behavior: normal;
+  transition-duration: 0s;
+  position: relative;
+  overflow:hidden;
 }
 .anime{
     display:flex;
