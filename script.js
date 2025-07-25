@@ -93,3 +93,9 @@ setInterval(() =>{
   document.title=titles[index]
   index= (index+1)%titles.length;
 },2000)
+const toggleBtn = document.getElementById('nav-toggle');
+const navContent = document.querySelector('.nav-content');
+toggleBtn.addEventListener('click',() =>{
+  navContent.classList.toggle('active');  
+})
+
