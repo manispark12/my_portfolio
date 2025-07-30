@@ -303,12 +303,12 @@ button, a, .tech-item img, .project, .skills-list li {
 }
 
 @media(max-width: 768px){
-  body{
-    margin:0px;
-    padding:0px;
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
   }
-}
-@media (max-width: 768px) {
   .anime::before {
     animation: none !important;
     color: #007bff !important;
@@ -324,106 +324,131 @@ button, a, .tech-item img, .project, .skills-list li {
     position: static;
     color: #007bff;
     font-weight: bold;
-  }
+  
 }
-
-@media(max-width:768px){
-  .navbar-container{
+.navbar-container{
     background:#333;
     display:block;
   }
- .nav-content {
-  flex-direction:row;
-  height:60px;
-  padding:0px 0px;    
-}
-.nav-content li{
-  margin: 0px 0px;
-  padding:2px;
-}
-.nav-content li>a{
-  color:white;
-  font-weight: bolder;
-  border-radius: 10%;
-}
-}
-@media(max-width:768px){
-  .nav-content img.main{
-    display:none;
-  }
-}
-@media(max-width:768px){
-  .main-content{
-    margin-top:50px; 
-    display:flex;
-    width:100%;
+   .nav-content {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .main-line {
-    padding: 20px;
+    .nav-content img.main {
+    width: 80px;
+    height: auto;
+    display:none;
+    margin-bottom: 1rem;
+  }
+  .nav-content ul {
+    display: flex;
+    flex-direction:row;
+    padding: 0;
+    margin-left: 0;
+    list-style: none;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-content ul li {
+    margin-left: 0px;
+    padding:0;
+    width: 100%;
     text-align: center;
   }
+   .nav-content ul li a {
+  margin-left: 0;
+  font-size:9px;
 
-  .main-line h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+  text-decoration: none;
+  color: white;
   }
-
-  .main-line .anime {
-    font-size: 28px;
-    font-weight: bold;
-    color: #007bff;
+    .nav-content ul li a:hover {
+    background-color: #0056b3;
   }
-
-  .connection {
+  .about-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
   }
 
-  .social-icons{
-    font-size: 22px;
-    margin: 0 8px;
-    
+  .main-content img {
+    margin: 0 auto;
+    border-radius: 50%;
+    display: block;
   }
-  .social-icons i{
-    color:red;
+
+  .main-line {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .anime {
+    display: inline-block;
+    position: relative;
+  }
+
+  .connection h1 {
+    font-size: 1.3rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
   }
 
   .my-button {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .first, .projects, .skil, .experience-section, .footer {
     width: 100%;
-    max-width: 250px;
-    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
   }
 
-  .btn {
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #007bff;
-    color: #007bff;
-    background: #fff;
-    text-decoration: none;
+  .education, .project, .intern-card {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .grid2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .footer-input, .fotter-input, textarea {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .footer-submit {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .footer-bottom {
     text-align: center;
+    padding: 1rem 0;
   }
 
-  .download-btn {
-    background: #007bff;
-    color: #fff;
-    border: none;
-  }
-
-  .main-line p {
-    font-size: 15px;
-    line-height: 1.5;
-    margin-top: 20px;
-  }
 }
 
 .education::before {
