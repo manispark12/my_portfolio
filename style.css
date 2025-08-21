@@ -368,7 +368,8 @@ button, a, .tech-item img, .project, .skills-list li {
     align-items: center;
     text-align: center;
     width: 100%;
-    padding: 1rem;
+    height:fit-content;
+    padding:12px;
   }
   .main-content{
     padding:20px;
@@ -384,9 +385,13 @@ button, a, .tech-item img, .project, .skills-list li {
   }
 
   .main-line {
-    margin-top: 10px;
+    margin-top: 15px;
     width: 100%;
     padding: 0 1rem;
+    margin-bottom: 0;
+  }
+  .main-line p{
+    margin: 0;
   }
 
   .anime {
@@ -510,6 +515,35 @@ button, a, .tech-item img, .project, .skills-list li {
     font-weight: bold;
     color:#007bff;
 }
+
+@media(max-width:768px){
+ 
+  .first{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+  }
+  .education{
+    display:flex;
+    width:100%;
+    flex-direction: column;
+  }
+  .education p{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .education span{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:flex-start;
+  }
+
+}
 .projects {
   padding: 40px;
 }
@@ -618,6 +652,15 @@ button, a, .tech-item img, .project, .skills-list li {
 .project:hover img {
     transform: scale(1.05);
 }
+
+@media(max-width:768px){
+  .projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
 .skil{
     display: flex;
     flex-direction: column;
@@ -642,16 +685,14 @@ button, a, .tech-item img, .project, .skills-list li {
 }
 h2 {
     font-size: 1.2rem;
-    margin-bottom: 15px;
-    width: 200px;
+    margin-bottom: 10px;
+    width: 100%;
     color: black;
-    justify-content:space-around;
+    justify-content:space-between;
     padding: 10px;
     font-weight: bold;
     flex-shrink:0;
 }
-
-/* Styling for the list of icons */
 .skil .skills-list {
     list-style-type: none;
     padding: 0;
@@ -660,8 +701,8 @@ h2 {
 }
 
 .skil .skills-list li {
-    width: 70px; /* Set a width for each icon */
-    height: 70px; /* Set a height for each icon */
+    width: 70px;
+    height: 70px;
     display: flex;
     padding: 20px;
     margin: 8px 16px;
@@ -709,11 +750,41 @@ nav {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.2s ease;
-  }
-  
-  .button:hover {
+  } 
+.button:hover {
     background-color: #005fa3;
   }
+@media (max-width: 420px) {
+  .skil{
+    display:flex;
+    flex-direction: column;
+}
+.fr{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.names,.names1,.fram,.tool,.database{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  height:150px;
+  box-shadow: none;
+}
+.names>h2,.names1>h2,.fram>h2,.tool>h2,.database>h2{
+       width:100%;
+       padding:5px;
+       margin-top: 0px;
+
+  }
+  .skills-list{
+    display:flex;
+    flex-direction: row;
+    
+  }
+}
 .experience-section {
   padding: 3rem 1rem;
   background: linear-gradient(135deg, #e0f7fa, #ffffff);

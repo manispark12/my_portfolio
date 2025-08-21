@@ -83,7 +83,6 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
                 requestAnimationFrame(smoothScroll);
             }
         }
-
         requestAnimationFrame(smoothScroll);
     });
 });
