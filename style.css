@@ -754,7 +754,7 @@ nav {
 .button:hover {
     background-color: #005fa3;
   }
-@media (max-width: 420px) {
+@media(max-width:768px){
   .skil{
     display:flex;
     flex-direction: column;
