@@ -685,7 +685,7 @@ button, a, .tech-item img, .project, .skills-list li {
 }
 h2 {
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     width: 100%;
     color: black;
     justify-content:space-between;
@@ -714,10 +714,10 @@ h2 {
 
 
 .skil .skills-list li img {
-    width: 80px; /* Set the width of the icons */
-    height: 80px; /* Set the height of the icons */
+    width: 80px;
+    height: 80px;
     object-fit: contain;
-    margin: 30px; /* Ensure icons maintain their aspect ratio */
+    margin: 20px;
 }
 
 .skil .skills-list li:hover {
@@ -782,8 +782,18 @@ nav {
   .skills-list{
     display:flex;
     flex-direction: row;
+    }
+    .skil .skills-list li{
+      margin:4px 8px 4px 8px; 
+}
+.skil .names>h2,.names1>h2,.fram>h2,.tool>h2,.database>h2{
+  margin:4px 4px 4px 8px;
+}
+.skil .skills-list li img{
+  margin-bottom:6px;
+}
     
-  }
+
 }
 .experience-section {
   padding: 3rem 1rem;
