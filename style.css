@@ -664,7 +664,7 @@ button, a, .tech-item img, .project, .skills-list li {
 .skil {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     padding: 20px;
     background-color:white;
 }
@@ -672,7 +672,7 @@ button, a, .tech-item img, .project, .skills-list li {
 .names, .names1, .fram, .tool, .database{
     display: flex;
     align-items:center;
-    padding:15px 20px;
+    padding:5px 10px;
     gap:15px;
     border-radius: 8px;
     width:100%;
@@ -688,8 +688,8 @@ h2 {
     font-size: 1.2rem;
     margin-bottom: 8px;
     color: black;
-    justify-content:space-between;
     padding: 10px;
+    width:195px;
     font-weight: bold;
     flex-shrink:0;
 }
@@ -697,22 +697,14 @@ h2 {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-   
+  
 }
-
 .skil .skills-list li {
-    width: 50px;
-    height: 50px;
     display: flex;
-    padding: 20px;
-    margin: 8px 16px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%; /* Make icons circular */
+    padding: 5px;
+    justify-content:center;
+    align-items:center;
+    border-radius: 50%;   
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -721,7 +713,6 @@ h2 {
     width: 80px;
     height: 80px;
     object-fit: contain;
-    margin: 20px;
 }
 
 .skil .skills-list li:hover {
@@ -759,23 +750,26 @@ nav {
     background-color: #005fa3;
   }
 @media(max-width:768px){
-  .skil{
-    display:flex;
+  .skil {
+    display: flex;
     flex-direction: column;
-}
+  }
 .fr{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
 }
 .names,.names1,.fram,.tool,.database{
-  text-align: center;
+ display: flex;
+    flex-direction: column;   
+    align-items: center;      
+    margin: 0;      
+    padding: 0;
+    box-shadow: none;
+}
+.names>h2,.names1>h2,.fram>h2,.tool>h2,.database>h2{
+  width:100%;
   display: flex;
-  flex-direction: column;
-  gap:10px;
-  height:100px;
-  box-shadow: none;
+  justify-content: center;
+  align-items: center;
 }
 .names:hover{
   box-shadow: none;
@@ -783,33 +777,16 @@ nav {
 .names1:hover{
   box-shadow: none;
 }
-.tool:hover{
+.fram:hover{
   box-shadow: none;
 }
-.fram:hover{
+.tool:hover{
   box-shadow: none;
 }
 .database:hover{
   box-shadow: none;
 }
-.names>h2,.names1>h2,.fram>h2,.tool>h2,.database>h2{
-       width:100%;
-       padding:5px;
-       margin-top: 0px;
 
-  }
- 
-    .skil .skills-list li{
-      margin:4px 8px 4px 8px; 
-}
-.skil .names>h2,.names1>h2,.fram>h2,.tool>h2,.database>h2{
-  margin:4px 16px 8px 16px;
-}
-.skil .skills-list li img{
-  margin-bottom:12px;
-}
-
-    
 
 }
 .experience-section {
