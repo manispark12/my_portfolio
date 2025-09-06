@@ -134,7 +134,7 @@ html{
 .first{
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: nowrap;
     padding: 20px;
     align-items: stretch;
@@ -947,6 +947,18 @@ nav {
       opacity:1;
       transform: translateY(0);     
     }
+}
+@media(max-width:768px){
+  .footer-bottom{
+  font-size: 12px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background:linear-gradient(135deg,rgb(25,25,155) 0%,rgb(255,255,55) 100%);
+}
+.forms{
+  width: 90%;
+}
 }
 
 
