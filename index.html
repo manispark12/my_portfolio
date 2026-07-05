@@ -1,257 +1,367 @@
-<html>
-    <head>
-
-        <title>Manikanta</title>
-        <link rel="icon" href="portfolio2-photoaidcom-cropped.jpg"/>
-
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="Manikanta, Portfolio, Developer">
-        <meta name="description" content="Manikanta Allena - Full Stack Developer Portfolio">
-
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manikanta Allena | Portfolio</title>
+    <link rel="icon" href="portfolio2-photoaidcom-cropped.jpg"/>
     
+    <meta name="keywords" content="Manikanta, Portfolio, Developer, Full Stack Developer, Python">
+    <meta name="description" content="Manikanta Allena - Full Stack Developer Portfolio">
 
-      
-        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-        </head>
-        
-        <body>
-            <!--<video class="background" autoplay muted loop>
-            <source src="video.mp4" type="video/mp4">
-            </video>-->  
-  <div class="nav-content" id="nav-content"> 
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education-details">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience-details">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-</div>
-       <div class="about-wrapper">
-  <div class="main-content">
-    <img src="new_profile7-removebg-preview.png" loading="lazy">
-  </div>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS & FontAwesome -->
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <div class="main-line" id="about">
-    <h1 class="intro">Hi I'm</h1>
-    <h1 class="anime" text-data="Manikanta Allena">Manikanta Allena</h1>
-
-    <div class="connection">
-      <h1>Full Stack Developer</h1>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/manikanta-allena-0915b2266/" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/manispark12" target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
-        <a href="https://x.com/rtgdsvn" target="_blank" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://www.instagram.com/allenamanikanta/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-      </div>
-
-      <div class="my-button">
-        <a href="#contact" class="btn btn-outline btn-lg">Get In Touch</a>
-        <a href="Manikanta_Python_Developer_Fresher_Resume.pdf" download="Manikanta_Resume" class="btn download-btn">Download CV</a>
-      </div>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Background Gradients -->
+    <div class="gradient-bg">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
     </div>
 
-    <p>A passionate Full Stack Developer with a strong foundation in both front-end and back-end development. With experience in building scalable, user-friendly web applications, I specialize in creating 
-        seamless and efficient solutions that deliver a high-quality user experience.</p>
-  </div>
-</div>
-
-
-        <div class="first" id="education-details">
-            <div class="education">
-                <h1>Graduation</h1>
-                <p>Course:<span>B-Tech</span></p>
-                <p>Specialization:<span>Computer Science and Engineering</span></p>
-                <p>Grade: <span>65%</span></p>
-            </div>
-    
-            <div class="education">
-                <h1>Intermediate</h1>
-                <p>Course:<span>10+2(intermediate)</span></p>
-                <p>Specialization:<span>Mathematics,Physics and Chemistry</span></p>
-                <p>Grade: <span>84%</span></p>
-            </div>
-            <div class="education">
-                <h1>SSC</h1>
-                <p>Course:<span>10th Standard</span></p>
-                <p>Specialization:<span>General Studies</span></p>
-                <p>Grade: <span>92%</span></p>
-            </div>
-
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">M<span>A</span></a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-content" id="nav-content"> 
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education-details">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience-details">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="projects">
-            <div class="grid2">
-                <div class="project">
-                   
-                    <img src="Images/flight image.jpg" alt="flight image">
-                    <h2>Optimizing Flight Booking Decisions Through Machine Learning Price Prediction</h2>
-                    <p>implemented model building by dividing the model into training, testing , 
-                        validation, training includes training the datasets and then validation by data preprocessing 
-                        and feature engineering and achieved accuracy and low bias and used regression algorithm.</p>
-                        <ul>
-    
-                        <li>Python</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Machine Learning</li>
-                        <li>Numpy</li>
-                        <li>Matplotlib</li>
-                        <li>Pandas</li>
+    <main class="main-wrapper">
+        <!-- Hero Section -->
+        <section class="about-wrapper" id="about-section">
+            <div class="hero-container">
+                <div class="main-content">
+                    <div class="img-wrapper">
+                        <img src="portfolio-img.jpeg" alt="Manikanta Allena" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="main-line" id="about">
+                    <span class="sub-intro">Welcome to my space</span>
+                    <h1 class="intro">Hi, I'm</h1>
+                    <h1 class="anime animated-name" text-data="Manikanta Allena">Manikanta Allena</h1>
+
+                    <div class="connection">
+                        <h2 class="role-title">Full Stack Developer</h2>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/manikanta-allena-0915b2266/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/manispark12" target="_blank" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://x.com/rtgdsvn" target="_blank" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/allenamanikanta/" target="_blank" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+
+                        <div class="my-button">
+                            <a href="#contact" class="btn btn-outline btn-lg">Get In Touch</a>
+                            <a href="Manikanta Allena Resume 2026.pdf" download="Manikanta_Resume" class="btn download-btn">Download CV <i class="fas fa-arrow-down"></i></a>
+                        </div>
+                    </div>
+
+                    <p class="bio-text">A passionate Full Stack Developer with a strong foundation in both front-end and back-end development. With experience in building scalable, user-friendly web applications, I specialize in creating seamless and efficient solutions that deliver a high-quality user experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section-container" id="education-details">
+            <h2 class="section-title">My Education</h2>
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Graduation</span>
+                        <h3>Bachelor of Technology</h3>
+                        <p class="specialization">Computer Science & Engineering</p>
+                        <div class="timeline-grade">Grade: <span>65%</span></div>
+                    </div>
+                </div>
+        
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-school"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Intermediate (10+2)</span>
+                        <h3>Secondary Education</h3>
+                        <p class="specialization">Mathematics, Physics & Chemistry</p>
+                        <div class="timeline-grade">Grade: <span>84%</span></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-certificate"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">SSC (10th Standard)</span>
+                        <h3>General Studies</h3>
+                        <p class="specialization">Secondary School Certificate</p>
+                        <div class="timeline-grade">Grade: <span>92%</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section-container projects-section" id="projects-details">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects">
+                <div class="grid2">
+                    <div class="project">
+                        <div class="project-img-container">
+                            <img src="Images/flight image.jpg" alt="Flight booking price prediction image">
+                        </div>
+                        <h2>Optimizing Flight Booking Decisions Through Machine Learning Price Prediction</h2>
+                        <p>Implemented model building by dividing the model into training, testing, validation. Training includes data preprocessing and feature engineering with regression algorithms to achieve low bias and high accuracy.</p>
+                        <ul class="tech-tags">
+                            <li>Python</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Machine Learning</li>
+                            <li>Numpy</li>
+                            <li>Matplotlib</li>
+                            <li>Pandas</li>
                         </ul>               
-                    <button type="button" class="lnk"><a href="https://github.com/manispark12/Internship-project" target="_blank">Link</a></button>
+                        <a href="https://github.com/manispark12/Internship-project" target="_blank" class="lnk">View Project <i class="fab fa-github"></i></a>
+                    </div>
 
-
-                </div>
-
-            <div class="project">
-              
-                <img src="Images/E-commerce.jpg" alt="image">
-                <h2>E-commerce Shopping Website using MERN Stack Development</h2>
-                <p>E-commerce website is an online Platform destination for online shopping that contains different household items as well as personal belongings. Mostly built on using MERN Stack development.</p>
-                    <ul>
-
-                    <li>HTML</li>
-                    <li>JavaScript</li>
-                    <li>TailWind CSS</li>
-                    <li>React.Js</li>
-                    <li>Node.Js</li>
-                    <li>Express.Js</li>
-                    <li>MongoDB</li>
-                    <li>REST APIs</li>
-                    </ul>
-                <button type="button" class="lnk"><a href="https://github.com/manispark12/MERN-STACK" target="_blank">Link</a></button>
-            </div>
-
-            <div class="project">
-              
-                <img src="Images/amazon img.jpg" alt="image">
-                <h2>Amazon Clone Website using javascript</h2>
-                <p>Amazon clone is a website that looks similar to the amazon e-commerce platform that contains facilities similar to the amazon website like add to cart and checkout and payment page.</p>
-                    <ul>
-
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>Jasmine Testing</li>
-                    </ul>
-                <button type="button" class="lnk"><a href="https://manispark12.github.io/Frontend-project/" target="_blank">Link</a></button>
-            </div>
-            </div>
-            </div>
-            <div class="skil" id="skills">
-                <h1 class="fr">Skills</h1>
-                <div class="names">
-                    <h2>Backend</h2>
-                    <ul class="skills-list">
-                        <li><img src="Images/python.jpg" alt="Python"></li>
-                        <li><img src="Images/Node.png" alt="Node.Js"></li>
+                    <div class="project">
+                        <div class="project-img-container">
+                            <img src="Images/E-commerce.jpg" alt="E-commerce shopping website image">
+                        </div>
+                        <h2>E-commerce Shopping Website using MERN Stack</h2>
+                        <p>An online destination platform for shopping home items and personal products. Features cart management, modern responsive layouts, and robust backend APIs.</p>
+                        <ul class="tech-tags">
+                            <li>HTML</li>
+                            <li>JavaScript</li>
+                            <li>Tailwind CSS</li>
+                            <li>React.js</li>
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>MongoDB</li>
+                            <li>REST APIs</li>
                         </ul>
-                        </div>
-                        <div class="names1">
-                            <h2>Frontend Technologies</h2>
-                            <ul class="skills-list">
-                                <li><img src="Images/html.jpg" alt="HTML" /></li>
-                                <li><img src="Images/css.jpg" alt="CSS"></li>
-                                <li><img src="javascript.webp" alt="JavaScript"></li>
-                            </ul>                           
-                        </div>
-                        <div class="fram">
-                            <h2>FrameWorks</h2>
-                            <ul class="skills-list">
-                                <li><img src="Images/django-logo-6.png" alt="Django"></li>
-                                <li><img src="Images/react.jpg" alt="React"></li>
-                                <li><img src="Images/Express-JS-logo.jpg" alt="Express"></li>
-                            </ul>
-                        </div>
-                        <div class="tool">
-                            <h2>Tools</h2>
-                            <ul class="skills-list">
-                                <li><img src="Images/git.png" alt="Git"></li>
-                            </ul>                         
-                        </div>    
-                        <div class="database">
-                            <h2>Data Bases</h2>
-                            <ul class="skills-list">
-                                <li><img src="Images/sql.jpg" alt="SQL"></li>
-                                <li><img src="Images/Mongodb.jpg" alt="Mongodb"></li>
-                            </ul>                         
-                        </div>                 
-                </div>
-                <div class="experience-section" id="experience-details">
-                    <h1 class="section-title">Experience</h1>
-                  
-                
-                    <div class="experience-carousel">
-
-                        <div class="intern-card">
-                            <h2 class="role">Artificial Intelligence & Machine Learning Intern</h2>
-                            <h3 class="company">Smart Bridge Educational Service</h3>
-                        
-                        
-                            <p class="location"><i class="fas fa-map-marker-alt"></i>Virtual</p>
-                        
-                        <p class="intern-description">
-                            Learned core to advanced ML, working with real datasets 
-                            and project workflows including training, validation, and testing.
-                        </p>
-                        </div>
-                        <div class="intern-card">
-                        
-                            <h2 class="role">Python Full Stack Training</h2>
-                            <h3 class="company">Career Bridge IT Service</h3>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i>Hyderabad</p>
-                    
-                        <p class="intern-description">
-                            Hands-on development with Python, Django, JS, React, 
-                            and SQL. Improved communication and problem-solving through mock interviews.
-                        </p>
+                        <a href="https://github.com/manispark12/MERN-STACK" target="_blank" class="lnk">View Project <i class="fab fa-github"></i></a>
                     </div>
+
+                    <div class="project">
+                        <div class="project-img-container">
+                            <img src="Images/amazon img.jpg" alt="Amazon clone image">
+                        </div>
+                        <h2>Amazon Clone Website using Javascript</h2>
+                        <p>A frontend recreation of the Amazon e-commerce platform including interactive product galleries, add-to-cart behavior, checkout summary, and Jasmine testing suite.</p>
+                        <ul class="tech-tags">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Jasmine Testing</li>
+                        </ul>
+                        <a href="https://manispark12.github.io/Frontend-project/" target="_blank" class="lnk">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section-container" id="skills">
+            <h2 class="section-title">My Skills & Tools</h2>
+            <div class="skil">
+                <div class="skills-grid">
+                    <div class="names">
+                        <h2>Backend</h2>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-item">
+                                    <img src="Images/python.jpg" alt="Python">
+                                    <span>Python</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-item">
+                                    <img src="Images/Node.png" alt="Node.Js">
+                                    <span>Node.js</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="names1">
+                        <h2>Frontend</h2>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-item">
+                                    <img src="Images/html.jpg" alt="HTML">
+                                    <span>HTML5</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-item">
+                                    <img src="Images/css.jpg" alt="CSS">
+                                    <span>CSS3</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-item">
+                                    <img src="javascript.webp" alt="JavaScript">
+                                    <span>JavaScript</span>
+                                </div>
+                            </li>
+                        </ul>                           
+                    </div>
+
+                    <div class="fram">
+                        <h2>Frameworks</h2>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-item">
+                                    <img src="Images/django-logo-6.png" alt="Django">
+                                    <span>Django</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-item">
+                                    <img src="Images/react.jpg" alt="React">
+                                    <span>React.js</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-item">
+                                    <img src="Images/Express-JS-logo.jpg" alt="Express">
+                                    <span>Express.js</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tool">
+                        <h2>Tools</h2>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-item">
+                                    <img src="Images/git.png" alt="Git">
+                                    <span>Git</span>
+                                </div>
+                            </li>
+                        </ul>                         
+                    </div>    
+
+                    <div class="database">
+                        <h2>Databases</h2>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-item">
+                                    <img src="Images/sql.jpg" alt="SQL">
+                                    <span>SQL</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-item">
+                                    <img src="Images/Mongodb.jpg" alt="Mongodb">
+                                    <span>MongoDB</span>
+                                </div>
+                            </li>
+                        </ul>                         
+                    </div>                 
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section-container" id="experience-details">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="experience-section">
+                <div class="experience-carousel">
                     <div class="intern-card">
-                        
-                        <h2 class="role">Python Developer Intern</h2>
-                        <h3 class="company">Cogent Data Solutions LLC</h3>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i>Hyderabad</p>
-                
-                    <p class="intern-description">
-                        Hands-on development with Python, Django,Html, Xpath, Web scrapping,regular expressions
-                        and SQL. extracting data from the web sources 
-                    </p>
-                </div>
-                     <div class="intern-card">
-                        
-                        <h2 class="role">Full Stack Developer</h2>
-                        <h3 class="company">Miru Digital Services LLP</h3>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i>Hyderabad</p>
-                
-                    <p class="intern-description">
-                        Hands-on development with React.Js And Node.js And Frontend Development As Well As backend development And worked on complete deployment lifecycle.
-                    </p>
-                </div>
-                       </div>
-
-                       
+                        <div>
+                            <h2 class="role">AI & ML Intern</h2>
+                            <h3 class="company">Smart Bridge Educational Service</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Virtual</p>
+                        </div>
+                        <p class="intern-description">
+                            Learned core to advanced ML models, working with real datasets and end-to-end pipelines including preprocessing, training, validation, and optimization.
+                        </p>
                     </div>
-                    <div class="footer" id="contact">
-                        <!-- Form Section Inside Footer -->
-                          <div class="forms">
-                            <h3 class="names6">Contact Me</h3>
-                            <form id="job-form">
-                              <input type="text" name="from_name" placeholder="Your Name" class="footer-input" required />
-                              <input type="email" name="from_email" placeholder="Your Email" class="footer-input" required />
-                              <textarea class="fotter-input" name="message" required placeholder="Your message"></textarea>   
-                              <button type="submit" class="footer-submit">Send Message</button>
-                            </form>
-                            <div id="form-message"></div>
-                        </div> 
-                         
-                      <div class="footer-bottom">
-                    <p>&copy; 2025 Made With <span>&#10084;&#65039;</span> by Manikanta. All Rights Reserved.</p>
-</div>
+
+                    <div class="intern-card">
+                        <div>
+                            <h2 class="role">Python Full Stack Trainee</h2>
+                            <h3 class="company">Career Bridge IT Services</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Hyderabad</p>
+                        </div>
+                        <p class="intern-description">
+                            Hands-on full-stack development with Python, Django, Javascript, React, and SQL. Actively participated in technical design reviews and mock interview preparations.
+                        </p>
+                    </div>
+
+                    <div class="intern-card">
+                        <div>
+                            <h2 class="role">Python Developer Intern</h2>
+                            <h3 class="company">Cogent Data Solutions LLC</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Hyderabad</p>
+                        </div>
+                        <p class="intern-description">
+                            Developed and maintained web scraping agents utilizing Python, Django, XPath, and regular expressions to aggregate complex structure data.
+                        </p>
+                    </div>
+
+                    <div class="intern-card">
+                        <div>
+                            <h2 class="role">Full Stack Developer</h2>
+                            <h3 class="company">Miru Digital Services LLP</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Hyderabad</p>
+                        </div>
+                        <p class="intern-description">
+                            Contributed to core development using React.js and Node.js. Designed REST APIs, optimized page performances, and worked across the deployment lifecycle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer & Contact -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="forms">
+                <h3 class="names6">Get In Touch</h3>
+                <form id="job-form">
+                    <div class="input-group">
+                        <input type="text" name="from_name" placeholder="Your Name" class="footer-input" required />
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="from_email" placeholder="Your Email" class="footer-input" required />
+                    </div>
+                    <div class="input-group">
+                        <textarea class="footer-input footer-textarea" name="message" required placeholder="Your Message"></textarea>   
+                    </div>
+                    <button type="submit" class="footer-submit">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+                <div id="form-message"></div>
+            </div> 
         </div>
-        <script src="script.js"></script>
-        </body>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Designed & Built by <span class="highlight">Manikanta Allena</span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
