@@ -84,7 +84,7 @@
         </section>
 
         <!-- Education Section -->
-        <section class="section-container" id="education-details">
+        <section class="section-container reveal" id="education-details">
             <h2 class="section-title">My Education</h2>
             <div class="education-timeline">
                 <div class="timeline-item">
@@ -120,11 +120,19 @@
         </section>
 
         <!-- Projects Section -->
-        <section class="section-container projects-section" id="projects-details">
+        <section class="section-container projects-section reveal" id="projects-details">
             <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+            </div>
+
             <div class="projects">
                 <div class="grid2">
-                    <div class="project">
+                    <div class="project reveal" data-category="ml">
                         <div class="project-img-container">
                             <img src="Images/flight image.jpg" alt="Flight booking price prediction image">
                         </div>
@@ -142,7 +150,7 @@
                         <a href="https://github.com/manispark12/Internship-project" target="_blank" class="lnk">View Project <i class="fab fa-github"></i></a>
                     </div>
 
-                    <div class="project">
+                    <div class="project reveal" data-category="fullstack">
                         <div class="project-img-container">
                             <img src="Images/E-commerce.jpg" alt="E-commerce shopping website image">
                         </div>
@@ -161,7 +169,7 @@
                         <a href="https://github.com/manispark12/MERN-STACK" target="_blank" class="lnk">View Project <i class="fab fa-github"></i></a>
                     </div>
 
-                    <div class="project">
+                    <div class="project reveal" data-category="frontend">
                         <div class="project-img-container">
                             <img src="Images/amazon img.jpg" alt="Amazon clone image">
                         </div>
@@ -180,7 +188,7 @@
         </section>
 
         <!-- Skills Section -->
-        <section class="section-container" id="skills">
+        <section class="section-container reveal" id="skills">
             <h2 class="section-title">My Skills & Tools</h2>
             <div class="skil">
                 <div class="skills-grid">
@@ -284,52 +292,72 @@
         </section>
 
         <!-- Experience Section -->
-        <section class="section-container" id="experience-details">
+        <section class="section-container reveal" id="experience-details">
             <h2 class="section-title">Work Experience</h2>
             <div class="experience-section">
-                <div class="experience-carousel">
-                    <div class="intern-card">
-                        <div>
-                            <h2 class="role">AI & ML Intern</h2>
-                            <h3 class="company">Smart Bridge Educational Service</h3>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Virtual</p>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <div class="experience-dot"></div>
+                        <div class="intern-card">
+                            <div class="intern-header">
+                                <div>
+                                    <h2 class="role">AI & ML Intern</h2>
+                                    <h3 class="company">Smart Bridge Educational Service</h3>
+                                </div>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Virtual</p>
+                            </div>
+                            <p class="intern-description">
+                                Learned core to advanced ML models, working with real datasets and end-to-end pipelines including preprocessing, training, validation, and optimization.
+                            </p>
                         </div>
-                        <p class="intern-description">
-                            Learned core to advanced ML models, working with real datasets and end-to-end pipelines including preprocessing, training, validation, and optimization.
-                        </p>
                     </div>
 
-                    <div class="intern-card">
-                        <div>
-                            <h2 class="role">Python Full Stack Trainee</h2>
-                            <h3 class="company">Career Bridge IT Services</h3>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Hyderabad</p>
+                    <div class="experience-item">
+                        <div class="experience-dot"></div>
+                        <div class="intern-card">
+                            <div class="intern-header">
+                                <div>
+                                    <h2 class="role">Python Full Stack Trainee</h2>
+                                    <h3 class="company">Career Bridge IT Services</h3>
+                                </div>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Hyderabad</p>
+                            </div>
+                            <p class="intern-description">
+                                Hands-on full-stack development with Python, Django, Javascript, React, and SQL. Actively participated in technical design reviews and mock interview preparations.
+                            </p>
                         </div>
-                        <p class="intern-description">
-                            Hands-on full-stack development with Python, Django, Javascript, React, and SQL. Actively participated in technical design reviews and mock interview preparations.
-                        </p>
                     </div>
 
-                    <div class="intern-card">
-                        <div>
-                            <h2 class="role">Python Developer Intern</h2>
-                            <h3 class="company">Cogent Data Solutions LLC</h3>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Hyderabad</p>
+                    <div class="experience-item">
+                        <div class="experience-dot"></div>
+                        <div class="intern-card">
+                            <div class="intern-header">
+                                <div>
+                                    <h2 class="role">Python Developer Intern</h2>
+                                    <h3 class="company">Cogent Data Solutions LLC</h3>
+                                </div>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Hyderabad</p>
+                            </div>
+                            <p class="intern-description">
+                                Developed and maintained web scraping agents utilizing Python, Django, XPath, and regular expressions to aggregate complex structure data.
+                            </p>
                         </div>
-                        <p class="intern-description">
-                            Developed and maintained web scraping agents utilizing Python, Django, XPath, and regular expressions to aggregate complex structure data.
-                        </p>
                     </div>
 
-                    <div class="intern-card">
-                        <div>
-                            <h2 class="role">Full Stack Developer</h2>
-                            <h3 class="company">Miru Digital Services LLP</h3>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Hyderabad</p>
+                    <div class="experience-item">
+                        <div class="experience-dot"></div>
+                        <div class="intern-card">
+                            <div class="intern-header">
+                                <div>
+                                    <h2 class="role">Full Stack Developer</h2>
+                                    <h3 class="company">Miru Digital Services LLP</h3>
+                                </div>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Hyderabad</p>
+                            </div>
+                            <p class="intern-description">
+                                Contributed to core development using React.js and Node.js. Designed REST APIs, optimized page performances, and worked across the deployment lifecycle.
+                            </p>
                         </div>
-                        <p class="intern-description">
-                            Contributed to core development using React.js and Node.js. Designed REST APIs, optimized page performances, and worked across the deployment lifecycle.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -337,7 +365,7 @@
     </main>
 
     <!-- Footer & Contact -->
-    <footer class="footer" id="contact">
+    <footer class="footer reveal" id="contact">
         <div class="footer-container">
             <div class="forms">
                 <h3 class="names6">Get In Touch</h3>

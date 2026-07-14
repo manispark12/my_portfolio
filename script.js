@@ -54,9 +54,60 @@ setInterval(() => {
 
 // Navigation Drawer Toggle
 const toggleBtn = document.getElementById('nav-toggle');
-const navContent = document.querySelector('.nav-content');
-if (toggleBtn && navContent) {
+const navContentEle = document.querySelector('.nav-content');
+if (toggleBtn && navContentEle) {
     toggleBtn.addEventListener('click', () => {
-        navContent.classList.toggle('active');  
+        navContentEle.classList.toggle('active');  
     });
 }
+
+// Scroll Reveal Animation Observer
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // Reveal once
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+});
+revealElements.forEach(el => revealObserver.observe(el));
+
+// Project Category Filtering
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projects = document.querySelectorAll('.project');
+
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Toggle active class
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const category = btn.getAttribute('data-filter');
+        
+        projects.forEach(project => {
+            const projectCategory = project.getAttribute('data-category');
+            if (category === 'all' || category === projectCategory) {
+                project.classList.remove('hide');
+            } else {
+                project.classList.add('hide');
+            }
+        });
+    });
+});
+
+// Cursor-Tracking Glow Effect on Cards
+const projectCards = document.querySelectorAll('.project');
+projectCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+    });
+});
