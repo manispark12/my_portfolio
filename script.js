@@ -76,28 +76,44 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 });
 revealElements.forEach(el => revealObserver.observe(el));
 
-// Project Category Filtering
-const filterButtons = document.querySelectorAll('.filter-btn');
-const projects = document.querySelectorAll('.project');
+// Project Carousel Controls
+const projectsTrack = document.getElementById('projects-track');
+const wrapper = document.querySelector('.projects-carousel-wrapper');
+const prevBtn = document.getElementById('prev-project-btn');
+const nextBtn = document.getElementById('next-project-btn');
+const scrollStatusSubtitle = document.getElementById('scroll-status-subtitle');
 
-filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        // Toggle active class
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        
-        const category = btn.getAttribute('data-filter');
-        
-        projects.forEach(project => {
-            const projectCategory = project.getAttribute('data-category');
-            if (category === 'all' || category === projectCategory) {
-                project.classList.remove('hide');
+// Click-to-Pause / Click-to-Resume Toggle (Hover will NOT stop scrolling)
+if (wrapper && projectsTrack) {
+    wrapper.addEventListener('click', (e) => {
+        // If clicking a link, let link open normally
+        if (e.target.closest('a')) return;
+
+        const isPaused = projectsTrack.classList.toggle('paused');
+        if (scrollStatusSubtitle) {
+            if (isPaused) {
+                scrollStatusSubtitle.innerHTML = `<i class="fas fa-pause-circle" style="color: var(--accent-pink);"></i> Auto-scrolling Paused • Click to Resume`;
             } else {
-                project.classList.add('hide');
+                scrollStatusSubtitle.innerHTML = `<i class="fas fa-play-circle animate-pulse"></i> Auto-scrolling showcase • Click to pause/resume`;
             }
-        });
+        }
     });
-});
+}
+
+// Arrow Button Navigation
+if (prevBtn && nextBtn && wrapper) {
+    const scrollAmount = 380;
+    
+    prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // prevent triggering pause toggle on wrapper click
+        wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+}
 
 // Cursor-Tracking Glow Effect on Cards
 const projectCards = document.querySelectorAll('.project');
@@ -109,5 +125,27 @@ projectCards.forEach(card => {
         
         card.style.setProperty('--mouse-x', `${x}px`);
         card.style.setProperty('--mouse-y', `${y}px`);
+    });
+});
+
+// Skills Category Filter Tabs
+const skillTabBtns = document.querySelectorAll('.skill-tab-btn');
+const skillCards = document.querySelectorAll('.skill-card-modern');
+
+skillTabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        skillTabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const tabCategory = btn.getAttribute('data-skill-tab');
+
+        skillCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            if (tabCategory === 'all' || tabCategory === cardCategory) {
+                card.classList.remove('hide');
+            } else {
+                card.classList.add('hide');
+            }
+        });
     });
 });
